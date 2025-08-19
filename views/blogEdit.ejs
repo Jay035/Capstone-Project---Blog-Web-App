@@ -1,0 +1,13 @@
+ <%- include("partials/header") %>
+ <div class="">
+
+   <% if(locals.blog){ %>
+    
+    <form id="form" action="/blog/edit/<%= blog.id %>" method="POST">
+      <input name="title" value=<%= blog.title %> type="text" class="feedback-input" placeholder="Blog title" />
+      <input name="author" value=<%= blog.author %> type="text" class="feedback-input" placeholder="Author" />
+      <textarea name="content" class="feedback-input" placeholder="Body"><%= blog.text %></textarea>
+      <input type="submit" value="Update" />
+    </form>
+    <% }%>
+  </div>
